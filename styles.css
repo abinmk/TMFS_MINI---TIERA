@@ -1,0 +1,88 @@
+header{
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  
+
+}
+.headerContainer{
+  margin:5px;
+  display: flex;
+  justify-content:space-between;
+  padding: 5px;
+  
+}
+.logoName{
+  font-size: 27px;
+  font-family: 'Audiowide';
+  display:flex;
+  justify-content: center;
+}
+.tmfsHeader:hover{
+ color: rgb(255, 255, 255);
+ cursor:default
+}
+span.tmfsHeader{
+  padding-left: 10px;
+  margin-top:6px ;
+  color:rgb(240, 240, 190);
+}
+div.menuList{
+  margin-right: 10px;
+}
+
+.menuList>ul{
+  justify-content: space-around;
+  display: inline-flex;
+  margin: 0px;
+  padding: 0px;
+
+}
+.menuList>ul>li{
+  padding:0px 15px 5px 10px;
+  font-size: 18px;
+  list-style-type: none;
+  font-weight: 500;
+  font-family: 'Varela Round';
+}
+.menuList>ul>li>a{
+ color:rgb(240, 240, 190);
+ text-decoration: none;
+ 
+}
+
+.tmfsHeader{
+  color: white;
+  
+}
+
+/* hover effect */
+
+.menuList>ul>li>a::before {
+  content: "";
+  display:flex;
+  width:0%;
+  height: 2px;
+  background: rgb(214, 0, 0);
+  z-index: -1;
+  margin:5px 0px;
+  transition: 0.8s;
+ 
+
+}
+.menuList>ul>li>a:hover::before{
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+ 
+  .tmfsHeader{
+    display:none;
+  }
+  .menuList>ul>li{
+    padding:5px;
+    font-size: 15px;
+  }
+  .headerContainer{
+    padding: 5px;
+  }
+}
