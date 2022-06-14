@@ -19,7 +19,7 @@
         </div>
             
         <div class="menuList">
-        <ul>
+        <ul id="ulList">
             <li><a href="#">HOME</a></li>
             <li><a href="#">CALIBRATION</a></li>
             <li><a href="https://www.portal.tieraonline.in/_module/knowledgebase/view/base/6">MANUAL</a></li>
@@ -55,7 +55,23 @@
     
 
     <script>
-       
+   /* Storing user's device details in a variable*/
+   let details = navigator.userAgent;
+  
+  /* Creating a regular expression 
+  containing some mobile devices keywords 
+  to search it in details string*/
+  let regexp = /android|iphone|kindle|ipad/i;
+
+  /* Using test() method to search regexp in details
+  it returns boolean value*/
+  let isMobileDevice = regexp.test(details);
+
+  if (isMobileDevice) {
+      document.getElementById("ulList").style.fontSize = "24px";
+  } else {
+    
+  }
     </script>
 
 
