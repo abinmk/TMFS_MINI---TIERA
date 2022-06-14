@@ -1,80 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>TMFS MINI</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
-    <link href="http://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
-</head>
-<style>
-
-</style>
-<body>
-    <header>
-<nav class="headerContainer">
-        <div class="logoName">
-            <img src="https://svgshare.com/i/iK3.svg" alt="tiera-horizontal-orange" height="40px" class="logo" >
-            <span class="tmfsHeader">T M F S M I N I</span>
-        </div>
-            
-        <div class="menuList">
-        <ul id="ulList">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">CALIBRATION</a></li>
-            <li><a href="https://www.portal.tieraonline.in/_module/knowledgebase/view/base/6">MANUAL</a></li>
-            <li><a href="#">LOGIN</a></li>
-        </ul> 
-        </div>
-</nav>
-</header>
-
-
-<section>
-<div class="slidecontainer">
-    <table  class="tableSlider">
-        <tr>
-             <td><h1 id="setrpm">SET RPM (0 - 3000)</h1>
-            <input id="amount" type="number" value="1500" min="0" max="3000" />
-             <br><br>
-            <input  class="slider" id="myRange" type="range" min="0" max="3000"/>
-            </td>   
-        </tr>  
-
-     </table> 
-</div>
-</section>
-
-
-            
-<div class="logotmfs">
-    <img src="https://i.ibb.co/n7ym8Qg/mfs-logo.png"  >
-</div>
-
-
-    
-
-    <script>
-   /* Storing user's device details in a variable*/
-   let details = navigator.userAgent;
+header{
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
   
-  /* Creating a regular expression 
-  containing some mobile devices keywords 
-  to search it in details string*/
-  let regexp = /android|iphone|kindle|ipad/i;
 
-  /* Using test() method to search regexp in details
-  it returns boolean value*/
-  let isMobileDevice = regexp.test(details);
+}
+.headerContainer{
+  margin:5px;
+  display: flex;
+  justify-content:space-between;
+  padding: 5px;
+  
+}
+.logoName{
+  font-size: 27px;
+  font-family: 'Audiowide';
+  display:flex;
+  justify-content: center;
+}
+.tmfsHeader:hover{
+ color: rgb(255, 255, 255);
+ cursor:default
+}
+span.tmfsHeader{
+  padding-left: 10px;
+  margin-top:6px ;
+  color:rgb(240, 240, 190);
+}
+div.menuList{
+  margin-right: 10px;
+}
 
-  if (isMobileDevice) {
-      document.write("You are using a Mobile Device");
-  } else {
-    document.getElementById("ulList").style.fontSize = "24px";
+.menuList>ul{
+  justify-content: space-around;
+  display: inline-flex;
+  margin: 0px;
+  padding: 0px;
+
+}
+.menuList>ul>li{
+  padding:0px 15px 5px 10px;
+  font-size: 18px;
+  list-style-type: none;
+  font-weight: 500;
+  font-family: 'Varela Round';
+}
+.menuList>ul>li>a{
+ color:rgb(240, 240, 190);
+ text-decoration: none;
+ 
+}
+
+.tmfsHeader{
+  color: white;
+  
+}
+
+/* hover effect */
+
+.menuList>ul>li>a::before {
+  content: "";
+  display:flex;
+  width:0%;
+  height: 2px;
+  background: rgb(214, 0, 0);
+  z-index: -1;
+  margin:5px 0px;
+  transition: 0.8s;
+ 
+
+}
+.menuList>ul>li>a:hover::before{
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+ 
+  .tmfsHeader{
+    display:none;
   }
-    </script>
-
-
-</body>
-
-</html>
+  .menuList>ul>li{
+    padding:5px;
+    font-size: 15px;
+  }
+  .headerContainer{
+    padding: 5px;
+  }
+}
