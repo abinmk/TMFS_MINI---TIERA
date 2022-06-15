@@ -48,13 +48,17 @@
 </div>
 
 <div class="safety">
-    <img class="safetyPng" src="warning.png"  >
+    <div class="warningBlock">
+    <img class="safetyPng" src="warning.png">
+    <span class="textWarning">Warning !</span>
+    </div>
+    
     <ul id="docs-internal-guid-b31e2b94-7fff-8a12-ee45-7031dc5cc78e" style="margin-left: 0px; padding-left: 20px;" class="align-justify">
         <li dir="ltr" aria-level="1">Make sure that the power is OFF&nbsp; before handling or assembling/disassembling the system</li>
         <li dir="ltr" aria-level="1">While switching on the system and also while the machine is running, do no place hands or objects near the rotating parts</li>
         <li dir="ltr" aria-level="1">Do
         not run the machine in <b>fault conditions for longer duration</b>. Run the machine Intermittently. Stop the 
-       machine for 5 minutes after 10minutes of testing for avoiding any&nbsp; permanent damage to the machine components due to overheating.</li>
+       machine for 5 minutes after 10 minutes of testing for avoiding any&nbsp; permanent damage to the machine components due to overheating.</li>
        <li aria-level="1" dir="ltr">For all faulty conditions the speed should be limited to 1800 rpm except for fin hitting the speed should be limited to 500 rpm. This would be&nbsp;
          to prevent any damages to the system. </li>
        <li dir="ltr" aria-level="1">In case of higher rpm tests, make sure the time duration is limited. <br></li>
@@ -73,34 +77,64 @@
 
 <!-- rpm direct control setting -->
 
-<section class="monitor">
-    <div class="secHeader">
-        <span float="left" >RUNNING STATUS</span> 
-    <span float="right" >RAMP CONTROL</span>  
-    </div>
-    
-<div class="status"> 
-        <div class="rpmDisplay">
-                <span>RPM</span> 
-                <input class="rpmOut" type="number" value="500" readonly  />
-        </div>
+<section class="secTwo">
+<span float="left" class="runStatusHed" >RUNNING STATUS</span> 
+<div class="runStatus">      
+            
+            <div class="rpmDisplay2">
+            <h2>RPM METER</h2> 
+            <span class="rpmOut2" >1250</span>
+            </div>
 
-        <div class="rpmDisplay">
-            <span>MOTOR STATE</span> 
-            <input class="rpmOut" type="text" value="OFF" readonly />
-        </div>
+            <div class="rpmDisplay">
+            <h2>MOTOR STATE</h2> 
+            <span class="rpmOut2" >OFF</span>
+            </div>
 
-        <div class="rpmDisplay">
-        <span>DIRECTION</span> 
-        <input class="rpmOut" type="text" value="FORWARD" readonly />
-        </div>
+            
+            <div class="rpmDisplay2">
+            <h2>DIRECTION</h2> 
+            <span class="rpmOut2" >FORWARD</span>
+            </div>
+            
 
-        <div class="rpmDisplay">
-            <span>MAX RPM</span> 
-            <input class="rpmOut" type="text" value="3000" readonly />
-        </div>
+            <div class="rpmDisplay">
+            <h2>MAX RPM</h2> 
+            <span class="rpmOut2" >3000</span>
+            </div>
+            
 </div>
 </section>
+<section class="secTwo">
+    <span float="left" class="runStatusHed" >RAMP CONTROLS</span> 
+    <div class="runStatus2">      
+                
+                <div class="rpmDisplay2">
+                <h2>INITIAL RPM</h2> 
+                <input class="rpmOut2" type="number" value="0" />
+                </div>
+    
+                <div class="rpmDisplay2">
+                <h2>FINAL RPM</h2> 
+                <input class="rpmOut2" type="number" value="2850"  />
+                </div>
+    
+                
+                <div class="rpmDisplay">
+                <h2>STEP(rpm)</h2> 
+                <input class="rpmOut" type="number" value="10"  />
+                </div>
+                
+    
+                <div class="rpmDisplay">
+                <h2>DELAY(ms)</h2> 
+                <input class="rpmOut" type="text" value="100" />
+                </div>
+                
+    </div>
+    </section>
+
+
             
 
 
