@@ -15,7 +15,7 @@
 <nav class="headerContainer">
         <div class="logoName">
             <img src="logo-1.png" alt="tiera-horizontal-orange" height="50px" class="logo" >
-            <span class="tmfsHeader">T M F S M I N I</span>
+            <span class="tmfsHeader">TMFS MINI</span>
         </div>
             
         <div class="menuList">
@@ -29,24 +29,14 @@
 </nav>
 </header>
 
-<!-- <section class="monitor">
 
-    <div class="rpmMonitor">
-     <div>RPM</div> 
-     <div class="value">0</div> 
-    </div>
-</section> -->
-
-
-
-
-
+<!-- rpm direct control setting -->
 
 <section class="control">
 <div class="logotmfs">
-        <img class="tmfsPng" src="https://i.ibb.co/n7ym8Qg/mfs-logo.png"  >
+    <img class="tmfsPng" src="https://i.ibb.co/n7ym8Qg/mfs-logo.png"  >
 </div>
-   
+
 <div class="setRpm">
 <h1 id="setrpmHeader">SET RPM (0 - 3000)</h1>
 <br><br>
@@ -57,9 +47,60 @@
 <button class="setBtn">SET</button>
 </div>
 
+<div class="safety">
+    <img class="safetyPng" src="warning.png"  >
+    <ul id="docs-internal-guid-b31e2b94-7fff-8a12-ee45-7031dc5cc78e" style="margin-left: 0px; padding-left: 20px;" class="align-justify">
+        <li dir="ltr" aria-level="1">Make sure that the power is OFF&nbsp; before handling or assembling/disassembling the system</li>
+        <li dir="ltr" aria-level="1">While switching on the system and also while the machine is running, do no place hands or objects near the rotating parts</li>
+        <li dir="ltr" aria-level="1">Do
+        not run the machine in <b>fault conditions for longer duration</b>. Run the machine Intermittently. Stop the 
+       machine for 5 minutes after 10minutes of testing for avoiding any&nbsp; permanent damage to the machine components due to overheating.</li>
+       <li aria-level="1" dir="ltr">For all faulty conditions the speed should be limited to 1800 rpm except for fin hitting the speed should be limited to 500 rpm. This would be&nbsp;
+         to prevent any damages to the system. </li>
+       <li dir="ltr" aria-level="1">In case of higher rpm tests, make sure the time duration is limited. <br></li>
+       <li dir="ltr" aria-level="1">Make sure to place the safety cover before running the machine at higher speeds.</li>
+       <li dir="ltr" aria-level="1">Always
+        ensure that the bolts in the rotor as well as the fasteners are tight 
+       and not making any unusual sounds by running at a lower RPM. After 
+       ensuring that there are no unusual noises, then the machine may be 
+       ramped to full speed.</li><li aria-level="1" dir="ltr">Do not loosen any bolts in running conditions.</li>
+    </ul>
+    </div>
+
 </section>
 
 
+
+<!-- rpm direct control setting -->
+
+<section class="monitor">
+    <div class="secHeader">
+        <span float="left" >RUNNING STATUS</span> 
+    <span float="right" >RAMP CONTROL</span>  
+    </div>
+    
+<div class="status"> 
+        <div class="rpmDisplay">
+                <span>RPM</span> 
+                <input class="rpmOut" type="number" value="500" readonly  />
+        </div>
+
+        <div class="rpmDisplay">
+            <span>MOTOR STATE</span> 
+            <input class="rpmOut" type="text" value="OFF" readonly />
+        </div>
+
+        <div class="rpmDisplay">
+        <span>DIRECTION</span> 
+        <input class="rpmOut" type="text" value="FORWARD" readonly />
+        </div>
+
+        <div class="rpmDisplay">
+            <span>MAX RPM</span> 
+            <input class="rpmOut" type="text" value="3000" readonly />
+        </div>
+</div>
+</section>
             
 
 
