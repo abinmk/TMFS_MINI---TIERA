@@ -150,17 +150,5 @@ float: left;
 }
 
 
-  .blockBox{
-    display: block;
-    width:100%;
-  }
-  .blockBox>div{
-    width: 100%;
-   margin-left: auto;
-   margin-right: auto;
-   margin-bottom: 20px;
-  }
-}
-
 
 
