@@ -11,157 +11,47 @@
 
 </style>
 <body>
+
+<div class="container">
     <header>
-<nav class="headerContainer">
-        <div class="logoName">
-            <img src="logo-1.png" alt="tiera-horizontal-orange" height="50px" class="logo" >
-            <span class="tmfsHeader">TMFS MINI</span>
-        </div>
-            
-        <div class="menuList">
-        <ul id="ulList">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">CALIBRATION</a></li>
-            <li><a href="https://www.portal.tieraonline.in/_module/knowledgebase/view/base/6">MANUAL</a></li>
-            <li><a href="#">LOGIN</a></li>
-        </ul> 
-        </div>
-</nav>
-</header>
+        <img class="logo" src="logo-1.png">
+    
+        <span class="loginBtn">LOGIN</span>
+    </header>
+    <br>
 
+<div class="headingTmfs">TMFS MINI CONTROLLER</div>
 
-<!-- rpm direct control setting -->
+<div class="blockBox">
 
-<section class="control">
-<div class="logotmfs">
-    <img class="tmfsPng" src="https://i.ibb.co/n7ym8Qg/mfs-logo.png"  >
+    
+    <div class="controlSpeed">
+        <div class="subHead">RPM Control</div>
+        <img id="speedImg" src="speed.png">
+        <p>( 0 - 3000 ) RPM</p>
+        
+    </div>
+
+    <div class="controlRamp">
+        <div class="subHead">Ramp Control</div>
+        <img id="rpmImg" src="rpm.png">
+        <p>Open Loop Control</p>
+    </div>
+
+    <div class="calib">
+        <div class="subHead">Calibration</div>
+        <img id="calibImg" src="calib.png">
+        <p>( 0 - 5 ) V</p>
+    </div>
+
 </div>
-
-<div class="setRpm">
-<h1 id="setrpmHeader">SET RPM (0 - 3000)</h1>
-<br><br>
-<input class="rpm" type="number" min="0" max="3000" value="500" />
-<br><br>
-<input  class="slider" type="range" min="0" max="3000"/>
+<span class="help">help</span>
 <br>
-<button class="setBtn">SET</button>
+<br>
+<div class="line"></div>
+
 </div>
-
-<div class="safety">
-    <div class="warningBlock">
-    <img class="safetyPng" src="warning.png">
-    <span class="textWarning">Warning !</span>
-    </div>
-    
-    <ul id="docs-internal-guid-b31e2b94-7fff-8a12-ee45-7031dc5cc78e" style="margin-left: 0px; padding-left: 20px;" class="align-justify">
-        <li dir="ltr" aria-level="1">Make sure that the power is OFF&nbsp; before handling or assembling/disassembling the system</li>
-        <li dir="ltr" aria-level="1">While switching on the system and also while the machine is running, do no place hands or objects near the rotating parts</li>
-        <li dir="ltr" aria-level="1">Do
-        not run the machine in <b>fault conditions for longer duration</b>. Run the machine Intermittently. Stop the 
-       machine for 5 minutes after 10 minutes of testing for avoiding any&nbsp; permanent damage to the machine components due to overheating.</li>
-       <li aria-level="1" dir="ltr">For all faulty conditions the speed should be limited to 1800 rpm except for fin hitting the speed should be limited to 500 rpm. This would be&nbsp;
-         to prevent any damages to the system. </li>
-       <li dir="ltr" aria-level="1">In case of higher rpm tests, make sure the time duration is limited. <br></li>
-       <li dir="ltr" aria-level="1">Make sure to place the safety cover before running the machine at higher speeds.</li>
-       <li dir="ltr" aria-level="1">Always
-        ensure that the bolts in the rotor as well as the fasteners are tight 
-       and not making any unusual sounds by running at a lower RPM. After 
-       ensuring that there are no unusual noises, then the machine may be 
-       ramped to full speed.</li><li aria-level="1" dir="ltr">Do not loosen any bolts in running conditions.</li>
-    </ul>
-    </div>
-
-</section>
-
-
-
-<!-- rpm direct control setting -->
-
-<section class="secTwo">
-<span float="left" class="runStatusHed" >RUNNING STATUS</span> 
-<div class="runStatus">      
-            
-            <div class="rpmDisplay2">
-            <h2>RPM METER</h2> 
-            <span class="rpmOut2" >1250</span>
-            </div>
-
-            <div class="rpmDisplay">
-            <h2>MOTOR STATE</h2> 
-            <span class="rpmOut2" >OFF</span>
-            </div>
-
-            
-            <div class="rpmDisplay2">
-            <h2>DIRECTION</h2> 
-            <span class="rpmOut2" >FORWARD</span>
-            </div>
-            
-
-            <div class="rpmDisplay">
-            <h2>MAX RPM</h2> 
-            <span class="rpmOut2" >3000</span>
-            </div>
-            
-</div>
-</section>
-<section class="secTwo">
-    <span float="left" class="runStatusHed" >RAMP CONTROLS</span> 
-    <div class="runStatus2">      
-                
-                <div class="rpmDisplay2">
-                <h2>INITIAL RPM</h2> 
-                <input class="rpmOut2" type="number" value="0" />
-                </div>
-    
-                <div class="rpmDisplay2">
-                <h2>FINAL RPM</h2> 
-                <input class="rpmOut2" type="number" value="2850"  />
-                </div>
-    
-                
-                <div class="rpmDisplay">
-                <h2>STEP(rpm)</h2> 
-                <input class="rpmOut" type="number" value="10"  />
-                </div>
-                
-    
-                <div class="rpmDisplay">
-                <h2>DELAY(ms)</h2> 
-                <input class="rpmOut" type="text" value="100" />
-                </div>
-                
-    </div>
-    </section>
-
-
-            
-
-
-
-    
-
-    <script>
-   /* Storing user's device details in a variable*/
-   let details = navigator.userAgent;
-  
-  /* Creating a regular expression 
-  containing some mobile devices keywords 
-  to search it in details string*/
-  let regexp = /android|iphone|kindle|ipad/i;
-
-  /* Using test() method to search regexp in details
-  it returns boolean value*/
-  let isMobileDevice = regexp.test(details);
-
-  if (isMobileDevice) {
-      document.getElementById("li").style.fontSize = "35px";
-  } else {
-    
-  }
-    </script>
 
 
 </body>
-
 </html>
